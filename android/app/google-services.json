@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708389952549",
+    "project_id": "explora-fd27d",
+    "storage_bucket": "explora-fd27d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708389952549:android:4bf5e15b18a90cd07eb3cc",
+        "android_client_info": {
+          "package_name": "com.resolute.explora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708389952549-k7sh14nlsg6qv0kra7tga97uj51lae83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9UT6zPasXkYKLY_WkKRlH21xloiW5KlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708389952549-k7sh14nlsg6qv0kra7tga97uj51lae83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
