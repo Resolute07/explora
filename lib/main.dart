@@ -1,6 +1,7 @@
 import 'package:explora/screens/LoginScreen.dart';
 
 import 'package:explora/screens/WelcomeScreen.dart';
+import 'package:explora/screens/indiaScreen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,11 +37,11 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: Lottie.asset('assets/happy.json'),
+      splash: Lottie.asset('assets/india1.json'),
       backgroundColor: Colors.purpleAccent,
       splashIconSize: 250.0,
       pageTransitionType: PageTransitionType.leftToRight,
-      nextScreen: DataScreen(),
+      nextScreen: IndiaPage(),
       duration: 4000,
     );
   }
