@@ -60,9 +60,9 @@ class IndiaPage extends StatelessWidget {
                           Card(
                             color: Colors.black54,
                             child: TextButton(onPressed: (){
-                              Navigator.pushNamed(context, WelcomeScreen.id);
+                              Navigator.pushNamed(context, DataScreen.id);
                             }, child: Text(
-                              'Login To Explore',style: TextStyle(
+                              'Explore',style: TextStyle(
                               color: Colors.white54
                             ),
                             )),
