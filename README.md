@@ -1,16 +1,3 @@
 # explora
+As we know till now UNESCO has listed 38 world Heritage sites in India .Here is  an App that glorifies the Heritage sites and  revolves around the idea to make world  Heritage sites of india more reachable. Providing with the basic information about all the 38 heritage site. In addition it provides with the data of nearby restaurants, hotels , and public restrooms.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
