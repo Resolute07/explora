@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -31,10 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Flexible(
                 child: Hero(
                   tag: 'logo',
-                  child: Card(
-
-                    child: Image.asset('assets/16.png'),
-                  ),
+                  child: Image.asset('assets/india1.png'),
                 ),
               ),
               SizedBox(
@@ -54,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                   obscureText: true,
                   textAlign: TextAlign.center,
-                  cursorColor: Colors.blueAccent,
+                  cursorColor: Colors.blueGrey,
                   style: TextStyle(
                       color: Colors.black
                   ),
@@ -66,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(title: 'Login',colour: Colors.lightGreenAccent, onPressed: () async{
+              RoundedButton(title: 'Login',colour: Colors.black54, onPressed: () async{
                 setState(() {
                   showSpinner =true;
                 });

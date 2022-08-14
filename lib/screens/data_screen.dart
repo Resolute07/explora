@@ -1,10 +1,13 @@
+
+
 import 'package:explora/screens/info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:explora/components/places.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_swiper_view/flutter_swiper_view.dart';
+
+
 
 User? loggedInUser;
 Uri url = Uri.parse('https://unescowhsindia-api.herokuapp.com/api');
@@ -18,6 +21,7 @@ class DataScreen extends StatefulWidget {
 
 class _DataScreenState extends State<DataScreen> {
   final _auth = FirebaseAuth.instance;
+
   @override
   void initState() {
     super.initState();
@@ -59,8 +63,10 @@ class _DataScreenState extends State<DataScreen> {
 
 
 
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -90,6 +96,7 @@ class _DataScreenState extends State<DataScreen> {
                   backgroundColor: Colors.lightGreenAccent,
                 ),
               );
+
             }
             return ListView.builder(
 
@@ -118,7 +125,7 @@ class _DataScreenState extends State<DataScreen> {
                                 alignment: Alignment.center,
                                 children: [
                                   Ink.image(
-                                    image: NetworkImage(snapshot.data[index].imagelink),
+                                    image: AssetImage('assets/placesImage/image${snapshot.data[index].srno}.jpg'),
                                     height: 240,
                                     fit: BoxFit.cover,
                                     child: InkWell(

@@ -1,3 +1,4 @@
+import 'package:explora/screens/WelcomeScreen.dart';
 import 'package:explora/screens/data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class IndiaPage extends StatelessWidget {
                             children: [
                               Ink.image(
                                 image: AssetImage(
-                                  'assets/taj.jpg'
+                                  'assets/Char_Minar_1660443246676.webp'
                                 ),
                                 height: 240,
                                 fit: BoxFit.cover,
@@ -53,18 +54,18 @@ class IndiaPage extends StatelessWidget {
 
                                 'Lying entirely in the northern hemisphere, the mainland extends between latitudes 8° 4\' and 37\° 6\' north, longitudes 68° 7\' and 97° 25\' east and measures about 3,214 km from north to south between the extreme latitudes and about 2,933 km from east to west between the extreme longitudes. It has a land frontier of about 15,200 km. The total length of the coastline of the mainland, Lakshadweep Islands and Andaman & Nicobar Islands is 7,516.6 km.',
                               style: TextStyle(
-                                  color: Colors.blueGrey, fontSize: 20.0),
+                                  color: Colors.black54, fontSize: 20.0),
                             ),
                           ),
-                          FloatingActionButton(
-
-
-                              child: Icon(Icons.arrow_circle_right_outlined,color: Colors.purpleAccent,),
-                              backgroundColor: Colors.blueGrey,
-                              onPressed: (){
-                                Navigator.pushNamed(context, DataScreen.id);
-
-                              }
+                          Card(
+                            color: Colors.black54,
+                            child: TextButton(onPressed: (){
+                              Navigator.pushNamed(context, WelcomeScreen.id);
+                            }, child: Text(
+                              'Login To Explore',style: TextStyle(
+                              color: Colors.white54
+                            ),
+                            )),
                           )
 
 

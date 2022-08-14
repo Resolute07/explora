@@ -42,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green ,
+      backgroundColor: Colors.grey,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -52,7 +52,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             Hero(
               tag: 'logo',
               child: Container(
-                child: Image.asset('assets/16.png'),
+                child: Image.asset('assets/india1.png'),
                 height: 300.0,
                 width: 200,
 
@@ -62,10 +62,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             SizedBox(
               height: 48.0,
             ),
-            RoundedButton(title: 'login',colour: Colors.lightGreenAccent,onPressed: (){
+            RoundedButton(title: 'Login',colour: Colors.black54,onPressed: (){
               Navigator.pushNamed(context, LoginScreen.id);
             },),
-            RoundedButton(title: 'Register',colour: Colors.lightGreen, onPressed: (){
+            RoundedButton(title: 'Register',colour: Colors.black54, onPressed: (){
               Navigator.pushNamed(context, RegistrationScreen.id);
             })
           ],

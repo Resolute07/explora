@@ -20,7 +20,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
         child: Padding(
@@ -32,9 +32,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Flexible(
                 child: Hero(
                   tag: 'logo',
-                  child: Container(
-                    height: 200,
-                    child: Image.asset('assets/16.png'),
+                  child: Image(
+                    image: AssetImage('assets/india1.png'),
                   ),
                 ),
               ),
@@ -63,7 +62,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(title: 'Register', colour: Colors.lightGreenAccent, onPressed: () async{
+              RoundedButton(title: 'Register', colour: Colors.black54, onPressed: () async{
                 setState(() {
                   showSpinner= true;
                 });

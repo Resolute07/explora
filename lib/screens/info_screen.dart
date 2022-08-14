@@ -11,6 +11,7 @@ class Info extends StatelessWidget {
     required this.data1,
   }) : super(key: key);
 
+
   Future<void> mapLauncher(String? value, String? query, String? state) async {
     Uri mapurl = Uri.parse(
         'https://www.google.com/maps/search/?api=1&query=$value $query $state ');
@@ -47,7 +48,7 @@ class Info extends StatelessWidget {
                             alignment: Alignment.center,
                             children: [
                               Ink.image(
-                                image: NetworkImage(data1.imagelink as String),
+                                image: AssetImage('assets/placesImage/image${data1.srno}.jpg'),
                                 height: 240,
                                 fit: BoxFit.cover,
                               ),
@@ -58,7 +59,7 @@ class Info extends StatelessWidget {
                             child: Text(
                               data1.description as String,
                               style: TextStyle(
-                                  color: Colors.indigoAccent, fontSize: 20.0),
+                                  color: Colors.black54, fontSize: 20.0),
                             ),
                           ),
                           Padding(
@@ -69,12 +70,12 @@ class Info extends StatelessWidget {
                                 Text(
                                   'Location :',
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                                 Text(
                                   data1.location as String,
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                               ],
                             ),
@@ -87,12 +88,12 @@ class Info extends StatelessWidget {
                                 Text(
                                   'Period : ',
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                                 Text(
                                   data1.period as String,
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                               ],
                             ),
@@ -105,12 +106,12 @@ class Info extends StatelessWidget {
                                 Text(
                                   'Enlistment Year : ',
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                                 Text(
                                   data1.enlistment as String,
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                               ],
                             ),
@@ -123,12 +124,12 @@ class Info extends StatelessWidget {
                                 Text(
                                   ' Site Type : ',
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                                 Text(
                                   data1.sitetype as String,
                                   style: TextStyle(
-                                      color: Colors.indigoAccent, fontSize: 20.0),
+                                      color: Colors.black54, fontSize: 20.0),
                                 ),
                               ],
                             ),
@@ -145,7 +146,7 @@ class Info extends StatelessWidget {
                         FloatingActionButton(
                             elevation: 8.0,
                             splashColor: Colors.blue,
-                            backgroundColor: Colors.blueGrey,
+                            backgroundColor: Colors.black54,
                             onPressed: () {
                               mapLauncher(null, data1.name, data1.location);
                             },
@@ -153,7 +154,7 @@ class Info extends StatelessWidget {
                         FloatingActionButton(
                             elevation: 8.0,
                             splashColor: Colors.blue,
-                            backgroundColor: Colors.blueGrey,
+                            backgroundColor: Colors.black54,
                             onPressed: () {
                               mapLauncher('Restaurants near', data1.name,
                                   data1.location);
@@ -162,7 +163,7 @@ class Info extends StatelessWidget {
                         FloatingActionButton(
                             elevation: 8.0,
                             splashColor: Colors.blue,
-                            backgroundColor: Colors.blueGrey,
+                            backgroundColor: Colors.black54,
                             onPressed: () {
                               mapLauncher(
                                   'hotels near', data1.name, data1.location);
@@ -171,7 +172,7 @@ class Info extends StatelessWidget {
                         FloatingActionButton(
                             elevation: 8.0,
                             splashColor: Colors.blue,
-                            backgroundColor: Colors.blueGrey,
+                            backgroundColor: Colors.black54,
                             onPressed: () {
                               mapLauncher('public toilets near', data1.name,
                                   data1.location);
