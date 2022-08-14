@@ -38,11 +38,11 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       splash: Lottie.asset('assets/india1.json'),
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.grey,
       splashIconSize: 250.0,
       pageTransitionType: PageTransitionType.leftToRight,
       nextScreen: IndiaPage(),
-      duration: 4000,
+      duration: 1500,
     );
   }
 }

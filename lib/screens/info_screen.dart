@@ -24,7 +24,7 @@ class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.grey,
       body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Padding(
@@ -36,7 +36,7 @@ class Info extends StatelessWidget {
                     tag: 'card${data1.srno}.',
                     child: Card(
                       elevation: 20.0,
-                      shadowColor: Colors.blue,
+                      shadowColor: Colors.blueGrey,
                       color: Colors.white54,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(

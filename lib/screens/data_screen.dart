@@ -69,12 +69,12 @@ class _DataScreenState extends State<DataScreen> {
           'India\'s Heritage',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.deepPurple
+            color: Colors.black54
           ),
         ),
       ),
 
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.grey,
 
 
       body: Container(
@@ -91,14 +91,12 @@ class _DataScreenState extends State<DataScreen> {
                 ),
               );
             }
-            return Swiper(
-              layout: SwiperLayout.STACK,
+            return ListView.builder(
+
               itemCount: snapshot.data.length,
-              itemWidth: double.maxFinite,
+
               itemBuilder: (BuildContext context, int index) {
-                return Stack(
-                  children:[
-                Hero(
+                return Hero(
 
 
                 tag: 'card${snapshot.data[index].srno}',
@@ -109,47 +107,52 @@ class _DataScreenState extends State<DataScreen> {
                         Card(
 
                           elevation: 10.0,
-                          shadowColor: Colors.blue,
+                          shadowColor: Colors.blueGrey,
                           clipBehavior: Clip.antiAlias,
                           color: Colors.white54,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(24.0)),
-                          child: Stack(
-                            alignment: Alignment.center,
+                          child: Column(
                             children: [
-                              Ink.image(
-                                image: NetworkImage(snapshot.data[index].imagelink),
-                                height: 240,
-                                fit: BoxFit.cover,
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.of(context).push(MaterialPageRoute(
-                                        builder: (context) => Info(
-                                          data1: snapshot.data[index],
-                                        )));
-                                  },
-                                ),
+                              Stack(
+                                alignment: Alignment.center,
+                                children: [
+                                  Ink.image(
+                                    image: NetworkImage(snapshot.data[index].imagelink),
+                                    height: 240,
+                                    fit: BoxFit.cover,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).push(MaterialPageRoute(
+                                            builder: (context) => Info(
+                                              data1: snapshot.data[index],
+                                            )));
+                                      },
+                                    ),
+                                  ),
+
+
+                                ],
                               ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(snapshot.data[index].name,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold,
 
-
+                                  ),),
+                              )
                             ],
                           ),
 
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(snapshot.data[index].name,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.deepPurple,
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.bold,
 
-                            ),),
-                        )
+                        ),
+
                       ],
                     )
-                )]
                 );
               },
             );
