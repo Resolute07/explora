@@ -24,7 +24,7 @@ class Info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigoAccent,
+      backgroundColor: Colors.purpleAccent,
       body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Padding(
