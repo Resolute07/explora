@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Flexible(
                 child: Hero(
                   tag: 'logo',
-                  child: Image.asset('assets/india1.png'),
+                  child: Image.asset('assets/independence.png'),
                 ),
               ),
               SizedBox(
@@ -79,6 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
                 on FirebaseAuthException catch(e){
                   Fluttertoast.showToast(msg: e.message as String,gravity: ToastGravity.TOP );
+                  Navigator.pop(context);
 
 
                 }

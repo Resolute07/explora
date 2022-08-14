@@ -35,7 +35,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 child: Hero(
                   tag: 'logo',
                   child: Image(
-                    image: AssetImage('assets/india1.png'),
+                    image: AssetImage('assets/independence.png'),
                   ),
                 ),
               ),
@@ -79,6 +79,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 }
                 on FirebaseAuthException catch(e){
                   Fluttertoast.showToast(msg: e.message as String,gravity: ToastGravity.TOP );
+                  Navigator.pop(context);
 
 
                 }
