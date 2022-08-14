@@ -1,3 +1,5 @@
+import 'package:fluttertoast/fluttertoast.dart';
+
 import 'data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -75,8 +77,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     showSpinner = false;
                   });
                 }
-                catch(e){
-                  print(e);
+                on FirebaseAuthException catch(e){
+                  Fluttertoast.showToast(msg: e.message as String,gravity: ToastGravity.TOP );
+
+
                 }
               })
             ],

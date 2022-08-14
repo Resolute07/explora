@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:explora/components/RoundedButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'data_screen.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 class LoginScreen extends StatefulWidget {
@@ -76,8 +77,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     showSpinner = false ;
                   });
                 }
-                catch(e){
-                  print(e);
+                on FirebaseAuthException catch(e){
+                  Fluttertoast.showToast(msg: e.message as String,gravity: ToastGravity.TOP );
 
 
                 }

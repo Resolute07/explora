@@ -46,6 +46,8 @@ dependencies:
   flutter_svg: # only if you want to use icons as they are svgs
   url_launcher: ^6.1.5
 
+  fluttertoast: ^8.0.9
+
   flutter_swiper_view: ^1.1.8
 
 dev_dependencies:
