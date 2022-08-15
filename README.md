@@ -16,7 +16,7 @@ The information screen then contain 4 floating action button at the botton of th
 # Link to the application
 https://drive.google.com/file/d/1vEKPxa5ovpskRWNTmoDrxh6ieJZOn0sm/view?usp=sharing
 
-#images
+# Images
 ![Screenshot_2022-08-15-20-02-47-44_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184656988-f44bddd0-b703-42a1-9373-350e78d0e909.jpg)
 ![Screenshot_2022-08-15-20-03-02-01](https://user-images.githubusercontent.com/97737605/184657024-a81bb476-2074-47ac-9d08-6584fe2db5c4.jpg)
 ![Screenshot_2022-08-15-20-03-30-70_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184657046-d19b1c02-142d-48a0-9ac5-584c78be8b15.jpg)
