@@ -26,3 +26,5 @@ The information screen then contain 4 floating action button at the botton of th
   url_launcher: ^6.1.5
 
  
+# Link to the application
+https://drive.google.com/file/d/1vEKPxa5ovpskRWNTmoDrxh6ieJZOn0sm/view?usp=sharing
