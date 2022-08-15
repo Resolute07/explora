@@ -11,20 +11,18 @@ The information screen then contain 4 floating action button at the botton of th
   
   
   
-# packages used
-  
-   firebase_core: ^1.20.1
-  lottie: ^1.4.1
-  animated_splash_screen: ^1.3.0
-  http: ^0.13.5
-  modal_progress_hud_nsn: ^0.3.0
-  firebase_auth: ^3.6.3
-  animated_text_kit: ^4.2.2
-  dependencies:
-  map_launcher: ^2.3.0
-  flutter_svg: # only if you want to use icons as they are svgs
-  url_launcher: ^6.1.5
 
  
 # Link to the application
 https://drive.google.com/file/d/1vEKPxa5ovpskRWNTmoDrxh6ieJZOn0sm/view?usp=sharing
+
+#images
+![Screenshot_2022-08-15-20-02-47-44_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184656988-f44bddd0-b703-42a1-9373-350e78d0e909.jpg)
+![Screenshot_2022-08-15-20-03-02-01](https://user-images.githubusercontent.com/97737605/184657024-a81bb476-2074-47ac-9d08-6584fe2db5c4.jpg)
+![Screenshot_2022-08-15-20-03-30-70_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184657046-d19b1c02-142d-48a0-9ac5-584c78be8b15.jpg)
+![Screenshot_2022-08-15-20-03-33-20_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184657065-957d9175-b268-4cc1-afba-1e7f12c096d9.jpg)
+![Screenshot_2022-08-15-20-03-44-79_9ab825eec83df4f8e84ef02e4efffdb9](https://user-images.githubusercontent.com/97737605/184657112-35311e1d-e41d-4c29-861e-4394b8674582.jpg)
+![Screenshot_2022-08-15-20-03-52-57](https://user-images.githubusercontent.com/97737605/184657155-eb459882-8787-4e26-8dd7-4f1f2e6f59df.jpg)
+
+
+
