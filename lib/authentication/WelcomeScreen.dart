@@ -1,4 +1,5 @@
-import 'LoginScreen.dart';
+
+import 'package:explora/authentication/LoginScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'RegistrationScreen.dart';

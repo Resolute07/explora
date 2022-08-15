@@ -1,22 +1,24 @@
-import 'package:explora/components/constant.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+import '../screens/data_screen.dart';
 import 'package:flutter/material.dart';
+
 import 'package:explora/components/RoundedButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'data_screen.dart';
+
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-class LoginScreen extends StatefulWidget {
-  static const String id = 'login_screen';
+import 'package:explora/components/constant.dart';
+class RegistrationScreen extends StatefulWidget {
+  static const String id = 'registration_screen';
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
   final _auth = FirebaseAuth.instance;
+  bool showSpinner = false;
   late String email ;
   late String password;
-  bool showSpinner = false ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +34,9 @@ class _LoginScreenState extends State<LoginScreen> {
               Flexible(
                 child: Hero(
                   tag: 'logo',
-                  child: Image.asset('assets/independence.png'),
+                  child: Image(
+                    image: AssetImage('assets/independence.png'),
+                  ),
                 ),
               ),
               SizedBox(
@@ -41,10 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                   keyboardType: TextInputType.emailAddress,
                   textAlign: TextAlign.center,
-                  onChanged: (value) async{
-                    email = value;
+                  onChanged: (value) {
+                    email = value ;
                   },
-                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter your Email')
+                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter Your Email')
               ),
               SizedBox(
                 height: 8.0,
@@ -52,29 +56,25 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                   obscureText: true,
                   textAlign: TextAlign.center,
-                  cursorColor: Colors.blueGrey,
-                  style: TextStyle(
-                      color: Colors.black
-                  ),
                   onChanged: (value) {
-                    password= value;
+                    password = value;
                   },
-                  decoration:kTextFeildDecoration.copyWith(hintText: 'Enter Your Password')
+                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter Your Password')
               ),
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(title: 'Login',colour: Colors.black54, onPressed: () async{
+              RoundedButton(title: 'Register', colour: Colors.black54, onPressed: () async{
                 setState(() {
-                  showSpinner =true;
+                  showSpinner= true;
                 });
                 try{
-                  final newUser =  await _auth.signInWithEmailAndPassword(email: email, password: password);
+                  final newUser =  await _auth.createUserWithEmailAndPassword(email: email, password: password);
                   if(newUser!= null){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => DataScreen()));
+                    Navigator.pushNamed(context, DataScreen.id);
                   }
                   setState(() {
-                    showSpinner = false ;
+                    showSpinner = false;
                   });
                 }
                 on FirebaseAuthException catch(e){

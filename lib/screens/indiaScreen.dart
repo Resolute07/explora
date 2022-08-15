@@ -1,5 +1,5 @@
-import 'package:explora/screens/WelcomeScreen.dart';
-import 'package:explora/screens/data_screen.dart';
+import 'package:explora/authentication/WelcomeScreen.dart';
+
 import 'package:flutter/material.dart';
 
 class IndiaPage extends StatelessWidget {

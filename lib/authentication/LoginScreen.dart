@@ -1,24 +1,23 @@
-import 'package:fluttertoast/fluttertoast.dart';
-
-import 'data_screen.dart';
+import 'package:explora/components/constant.dart';
+import 'package:explora/screens/data_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:explora/components/RoundedButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:explora/components/constant.dart';
-class RegistrationScreen extends StatefulWidget {
-  static const String id = 'registration_screen';
+class LoginScreen extends StatefulWidget {
+  static const String id = 'login_screen';
   @override
-  _RegistrationScreenState createState() => _RegistrationScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _RegistrationScreenState extends State<RegistrationScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
-  bool showSpinner = false;
   late String email ;
   late String password;
+  bool showSpinner = false ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +33,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Flexible(
                 child: Hero(
                   tag: 'logo',
-                  child: Image(
-                    image: AssetImage('assets/independence.png'),
-                  ),
+                  child: Image.asset('assets/independence.png'),
                 ),
               ),
               SizedBox(
@@ -45,10 +42,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               TextField(
                   keyboardType: TextInputType.emailAddress,
                   textAlign: TextAlign.center,
-                  onChanged: (value) {
-                    email = value ;
+                  onChanged: (value) async{
+                    email = value;
                   },
-                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter Your Email')
+                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter your Email')
               ),
               SizedBox(
                 height: 8.0,
@@ -56,25 +53,29 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               TextField(
                   obscureText: true,
                   textAlign: TextAlign.center,
+                  cursorColor: Colors.blueGrey,
+                  style: TextStyle(
+                      color: Colors.black
+                  ),
                   onChanged: (value) {
-                    password = value;
+                    password= value;
                   },
-                  decoration: kTextFeildDecoration.copyWith(hintText: 'Enter Your Password')
+                  decoration:kTextFeildDecoration.copyWith(hintText: 'Enter Your Password')
               ),
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(title: 'Register', colour: Colors.black54, onPressed: () async{
+              RoundedButton(title: 'Login',colour: Colors.black54, onPressed: () async{
                 setState(() {
-                  showSpinner= true;
+                  showSpinner =true;
                 });
                 try{
-                  final newUser =  await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                  final newUser =  await _auth.signInWithEmailAndPassword(email: email, password: password);
                   if(newUser!= null){
-                    Navigator.pushNamed(context, DataScreen.id);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>DataScreen()));
                   }
                   setState(() {
-                    showSpinner = false;
+                    showSpinner = false ;
                   });
                 }
                 on FirebaseAuthException catch(e){

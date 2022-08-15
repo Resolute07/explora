@@ -1,13 +1,14 @@
-import 'package:explora/screens/LoginScreen.dart';
 
-import 'package:explora/screens/WelcomeScreen.dart';
+
+import 'package:explora/authentication/LoginScreen.dart';
+import 'package:explora/authentication/WelcomeScreen.dart';
 import 'package:explora/screens/indiaScreen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:lottie/lottie.dart';
-import 'package:explora/screens/RegistrationScreen.dart';
+import 'package:explora/authentication/RegistrationScreen.dart';
 import 'package:explora/screens/data_screen.dart';
 
 void main() async {
